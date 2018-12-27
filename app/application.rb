@@ -4,8 +4,8 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/items/)
-      req.path.split("/items/").last
-      
+      search_term = req.path.split("/items/").last
+      @@items.find
       
       resp.write 
       
