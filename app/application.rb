@@ -4,7 +4,11 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/items/)
+      req.path.split("/items/").last
+      
+      
+      resp.write 
       
     else
       resp.write "Page not found"
-      status_code = 400
+      status_code = 404
