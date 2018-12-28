@@ -9,6 +9,8 @@ class Application
       item = Item.all.find {|i| i.name == search_term}
         if item
           resp.write item.price
+        else
+          
       
     else
       resp.write "Route not found"
