@@ -10,5 +10,5 @@ class Application
       resp.write 
       
     else
-      resp.write "Page not found"
+      resp.write "Route not found"
       status_code = 404
