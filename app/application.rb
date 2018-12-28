@@ -6,7 +6,7 @@ class Application
     
     if req.path.match(/items/)
       search_term = req.path.split("/items/").last
-      item = @@items.find {|i| i.name == search_term}
+      item = items.all.find {|i| i.name == search_term}
         resp.write
       
     else
