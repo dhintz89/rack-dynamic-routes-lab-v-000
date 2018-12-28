@@ -10,8 +10,15 @@ class Application
         if item
           resp.write item.price
         else
-          
+          resp.write "Item not found"
+          status_code = 400
+        end
       
     else
       resp.write "Route not found"
       status_code = 404
+    end
+    
+    resp.finish
+  end
+end
